@@ -84,7 +84,7 @@ int main() {
     abrir_wireshark();
     usar_tcpdump_icmp_arp();
     verificar_version_kernel();
-
+}
 
     return 0;
 }
