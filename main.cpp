@@ -74,11 +74,22 @@ void verificar_version_kernel() {
 
 int main() {
     obtener_direccion_ip();
+           system("sleep(1)");
+
     obtener_nombre_host();
+           system("sleep(1)");
+
     verificar_conectividad_google();
+           system("sleep(1)");
+
     abrir_wireshark();
+         system("sleep(1)");
+  
     usar_tcpdump_icmp_arp();
+         system("sleep(1)");
+  
     verificar_version_kernel();
+       system("sleep(1)");
 
     return 0;
 }
