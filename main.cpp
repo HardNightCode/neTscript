@@ -38,8 +38,8 @@ void obtener_direccion_ip() {
 }
 
 void obtener_nombre_host() {
-    char hostname[HOST_NAME_MAX];
-    if (gethostname(hostname, HOST_NAME_MAX) == 0) {
+    char hostname[NI_MAXHOST];
+    if (gethostname(hostname, NI_MAXHOST) == 0) {
         cout << "Nombre de host: " << hostname << endl;
     } else {
         perror("gethostname");
@@ -47,11 +47,6 @@ void obtener_nombre_host() {
     }
 }
 
-int main() {
-    obtener_direccion_ip();
-    obtener_nombre_host();
-    
--------------------------------------Comandos de sistema a partir de aquí------------------------------------
 void verificar_conectividad_google() {
     cout << "Verificando conectividad con google.es..." << endl;
     int result = system("ping -c 4 google.es");
@@ -84,7 +79,9 @@ int main() {
     abrir_wireshark();
     usar_tcpdump_icmp_arp();
     verificar_version_kernel();
-}
 
     return 0;
 }
+
+
+
